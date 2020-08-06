@@ -3,29 +3,39 @@
     <head>
         <meta charset="UTF-8">
         <title>Calculadora</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css" integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+        
     </head>
     <body>
-        <form>
-            <table>
-                <tr>
-                    <th colspan="5"> Calculadora</th>
-                </tr>
-                <tr>
-                    <td>Valor 1 <input type="text" name="valor1" id="valor1"></td>
-                    <td>
-                        <select name="sinal" id="sinal">
-                            <option value="+">+</option>
-                            <option value="-">-</option>
-                            <option value="*">x</option>
-                            <option value="/">÷</option>
-                        </select>
-                    </td>
-                    <td>Valor 2 <input type="text" name="valor2" id="valor2"></td>
-                    <td><input type="button" value="=" onclick="calcular()"></td>
-                    <td><input type="text" name="result" id="result"></td>
-                </tr>
-            </table>
-        </form>
+        <style>
+            .button {
+                width: 10%;
+                border-radius: 10px;
+            }
+            .label {
+                width: 9%;                
+            }
+        </style>
+        <div class="container text-center">
+            <div class="title">
+                <h3 class="text-center">Calculadora</h3>
+            </div>
+            <label class="label">Valor 1:</label>
+            <input  type="text" name="valor1" id="valor1"><br>
+
+            <select class="btn btn-outline-secondary button" name="sinal" id="sinal">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">x</option>
+                <option value="/">÷</option>
+            </select><br>
+            <label class="label">Valor 2:</label>
+            <input  type="text" name="valor2" id="valor2"><br>
+
+            <input class="btn btn-outline-secondary button" type="button" value="=" onclick="calcular()"><br>
+            <label class="label">Resultado:</label>
+            <input type="text" name="result" id="result">
+        </div>
         <script type="text/javascript" src="calculadora.js"></script>
     </body>
 </html>
